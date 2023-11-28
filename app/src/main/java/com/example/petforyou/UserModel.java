@@ -1,8 +1,9 @@
 package com.example.petforyou;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserModel {
+public class UserModel implements Serializable {
     private int id;
     private String login;
     private String passwordHash;

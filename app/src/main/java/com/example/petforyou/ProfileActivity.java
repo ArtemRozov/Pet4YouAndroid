@@ -7,17 +7,18 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
-    private UserModel user;
-    public ProfileActivity (UserModel user){
-        this.user = user;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        UserModel user = (UserModel) getIntent().getSerializableExtra("userModel");
+
+        TextView name = findViewById(R.id.nameTextView);
+        name.setText("Name: " + user.getLogin().toString());
 
         Button button = findViewById(R.id.profileChangeButton);
         button.setOnClickListener(view -> {

@@ -1,5 +1,7 @@
 package com.example.petforyou;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -12,4 +14,10 @@ public interface ApiService {
 
     @POST("api/Auth/login")
     Call<LoginResponse> loginUser(@Body LoginCredentials credentials);
+
+    @POST("api/advertisement/filter")
+    Call<List<Advertisement>> getAdvertisements(@Body AdvertisementFilterModel filters);
+
+    @POST("api/advertisement/add")
+    Call<Void> addAdvertisement(@Body Advertisement advertisement);
 }

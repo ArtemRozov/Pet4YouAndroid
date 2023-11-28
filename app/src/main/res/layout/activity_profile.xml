@@ -63,12 +63,13 @@
                 android:contentDescription="avatar image"/>
 
             <TextView
+                android:id="@+id/nameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5pt"
+                android:layout_marginTop="10pt"
                 android:text="Ім'я: Іван"
-                android:textSize="22sp"
-                android:layout_marginTop="10pt"/>
+                android:textSize="22sp" />
 
             <TextView
                 android:layout_width="wrap_content"

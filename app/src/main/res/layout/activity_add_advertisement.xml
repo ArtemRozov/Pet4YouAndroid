@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="@color/background_gray"
+    tools:context=".AddAdvertisementActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:paddingVertical="5pt"
+        android:background="@color/main_blue_color"
+        android:contentDescription="@string/content_descr_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:layout_marginHorizontal="5pt"
+        android:layout_marginVertical="5pt"
+        android:text="Заповніть поля для додавання" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="@color/main_blue_color">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:layout_marginVertical="5pt"
+                android:text="Додавання оголошення" />
+
+            <Spinner
+                android:id="@+id/spinnerOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginBottom="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:background="@color/white"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:hint="Title"
+                android:inputType="text"
+                android:autofillHints="username" />
+
+            <EditText
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:background="@color/white"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:hint="Description"
+                android:inputType="textEmailAddress" />
+
+            <Spinner
+                android:id="@+id/petTypeSpinnerOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/countryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginVertical="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="Country" />
+
+            <EditText
+                android:id="@+id/cityTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginBottom="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="City" />
+
+            <EditText
+                android:id="@+id/regionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginBottom="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="Region" />
+
+            <EditText
+                android:id="@+id/breedTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginBottom="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="Breed" />
+
+            <EditText
+                android:id="@+id/ageTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginBottom="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="Age" />
+
+            <EditText
+                android:id="@+id/priceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:layout_marginBottom="5pt"
+                android:padding="3pt"
+                android:ems="10"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="Price" />
+
+            <Spinner
+                android:id="@+id/genderSpinnerOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10pt"
+                android:backgroundTint="@color/second_blue_color"
+                android:textSize="22sp"
+                android:text="Додати" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

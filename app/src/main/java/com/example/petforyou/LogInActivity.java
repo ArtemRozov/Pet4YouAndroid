@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -46,6 +48,8 @@ public class LogInActivity extends AppCompatActivity {
                         System.out.println("555555555555555555555");
                         // Действия после успешного входа пользователя
                         Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                        intent.putExtra("userModel", user); // "userModel" - ключ, по которому объект будет передан
+
                         startActivity(intent);
                     } else {
                         // Обработка ошибки
