@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textAlignment="center"
-                android:text="Обране"
+                android:text="Мої оголошення"
                 android:textColor="@android:color/black"
                 android:textSize="13sp" />
         </LinearLayout>
@@ -153,35 +153,6 @@
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:text="Виставити"
-                android:textColor="@android:color/black"
-                android:textSize="13sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/chatButton"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/main_blue_color"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="3pt">
-
-            <ImageView
-                android:id="@+id/chatImage"
-                android:layout_width="30pt"
-                android:layout_height="30pt"
-                android:src="@drawable/chat"
-                android:layout_gravity="center"
-                android:contentDescription="chat"
-                android:scaleType="fitCenter"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text="Чат"
                 android:textColor="@android:color/black"
                 android:textSize="13sp" />
         </LinearLayout>

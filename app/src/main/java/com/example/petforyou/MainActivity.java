@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -88,6 +89,15 @@ public class MainActivity extends AppCompatActivity {
                         null, null, null,
                         null, 0, 0, 0, 0));
 
+        Intent intentAdv = getIntent();
+        if (intentAdv.hasExtra("filterModel")) {
+            AdvertisementFilterModel filterModel = (AdvertisementFilterModel) intentAdv.getSerializableExtra("filterModel");
+
+            call = apiService.getAdvertisements(filterModel);
+        }
+
+
+
         call.enqueue(new Callback<List<Advertisement>>() {
             @Override
             public void onResponse(Call<List<Advertisement>> call, Response<List<Advertisement>> response) {
@@ -111,6 +121,14 @@ public class MainActivity extends AppCompatActivity {
                     //adapter.notifyDataSetChanged();
                     AdvertisementAdapter adapter = new AdvertisementAdapter(adsList);
                     recyclerView.setAdapter(adapter);
+//                    adapter.setOnItemClickListener(advertisement -> {
+//                        // Обработка клика на объявлении
+//                        // Здесь вы можете запустить новую активность, передавая информацию об объявлении
+//                        Intent intent = new Intent(MainActivity.this, FullAdvertisementActivity.class);
+//                        intent.putExtra("advertisement", advertisement); // передача информации об объявлении
+//                        startActivity(intent);
+//                    });
+
                     //System.out.println("11111111111111111111111");
                     //System.out.println("adsList = "  + adsList.size());
                 } else {
@@ -135,6 +153,20 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(view -> {
             Intent intent;
             intent = new Intent(getApplicationContext(), AddAdvertisementActivity.class);
+            startActivity(intent);
+        });
+
+        Button filterButton = findViewById(R.id.button);
+        filterButton.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(getApplicationContext(), FilterActivity.class);
+            startActivity(intent);
+        });
+
+        LinearLayout likedButton = findViewById(R.id.likedButton);
+        likedButton.setOnClickListener(view -> {
+            Intent intent;
+            intent = new Intent(getApplicationContext(), MyAdvertisements.class);
             startActivity(intent);
         });
 

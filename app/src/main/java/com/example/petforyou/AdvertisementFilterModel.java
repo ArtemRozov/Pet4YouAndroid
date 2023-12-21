@@ -1,6 +1,8 @@
 package com.example.petforyou;
 
-public class AdvertisementFilterModel {
+import java.io.Serializable;
+
+public class AdvertisementFilterModel implements Serializable {
     private String advertisementType;
     private String[] petTypes;
     private String[] petBreeds;

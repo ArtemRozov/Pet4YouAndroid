@@ -16,6 +16,15 @@
         android:theme="@style/Theme.PetForYou"
         tools:targetApi="31">
         <activity
+            android:name=".MyAdvertisements"
+            android:exported="false" />
+        <activity
+            android:name=".FilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FullAdvertisementActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddAdvertisementActivity"
             android:exported="false" />
         <activity

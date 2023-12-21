@@ -13,6 +13,7 @@ import java.util.List;
 
 public class AdvertisementAdapter extends RecyclerView.Adapter<AdvertisementAdapter.AdViewHolder> {
     private List<AdvertisementModel> adsList;
+    private OnItemClickListener listener;
 
     public AdvertisementAdapter(List<AdvertisementModel> adsList) {
         this.adsList = adsList;
@@ -33,7 +34,22 @@ public class AdvertisementAdapter extends RecyclerView.Adapter<AdvertisementAdap
         holder.subtitle2TextView.setText(ad.getSubtitle2());
         holder.priceTextView.setText(ad.getPrice());
         holder.imageView.setImageResource(ad.getImageResId());
+
+        holder.itemView.setOnClickListener(view -> {
+            if (listener != null) {
+                listener.onItemClick(ad);
+            }
+        });
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(AdvertisementModel advertisement);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
 
     @Override
     public int getItemCount() {

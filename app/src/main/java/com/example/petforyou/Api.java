@@ -12,7 +12,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Api {
 
-    private static final String BASE_URL = "https://10.0.2.2:7269/";
+    //private static final String BASE_URL = "https://10.0.2.2:7269/";
+    private static final String BASE_URL = "https://pet4youapi.azurewebsites.net/";
+
 
     public static Retrofit getInsecureClient() {
         Retrofit retrofit = null;
