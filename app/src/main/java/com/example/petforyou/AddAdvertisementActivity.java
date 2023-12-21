@@ -76,7 +76,7 @@ public class AddAdvertisementActivity extends AppCompatActivity {
 
             Advertisement advertisement = new Advertisement(0, titleTextView.getText().toString(),
                     petType, LocalDateTime.now().toString(),
-                    8, descriptionTextView.getText().toString(),
+                    4, descriptionTextView.getText().toString(),
                     advType,
                     false);
 

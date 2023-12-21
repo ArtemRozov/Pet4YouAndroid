@@ -4,9 +4,11 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
     @GET("api/User/id/{userId}") // Указываем путь к вашему API endpoint с переменной в пути
@@ -20,4 +22,10 @@ public interface ApiService {
 
     @POST("api/advertisement/add")
     Call<Void> addAdvertisement(@Body Advertisement advertisement);
+
+    @GET("api/Advertisement/user/id")
+    Call<List<Advertisement>> getAdvertisementsByUser(@Query("userId") int userId);
+
+    @DELETE("api/Advertisement/{id}")
+    Call<Void> deleteAdvertisement(@Path("id") int advertisementId);
 }

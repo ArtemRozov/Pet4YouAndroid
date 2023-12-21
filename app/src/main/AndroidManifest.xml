@@ -16,6 +16,9 @@
         android:theme="@style/Theme.PetForYou"
         tools:targetApi="31">
         <activity
+            android:name=".DeleteActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyAdvertisements"
             android:exported="false" />
         <activity
